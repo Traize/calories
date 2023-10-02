@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="content">
+                <form class="add-food">
+                    <div class="inputs-container">
+                        <input type="text" class="food-name add-input" placeholder="Введите название">
+                        <input type="number" class="food-calories add-input" placeholder="Введите кол-во калорий">
+                    </div>
+                    <button class="add-btn">Добавить</button>
+                </form>
+                <div class="food-list">
+                    <div class="list-header">
+                        <h3 class="header-name" data-type="name-inc">Название продукта</h3>
+                        <h3 class="header-calories" data-type="calories-inc">Калории продукта</h3>
+                    </div>
+                    <div class="filter-block none">
+                        <span class="filter-name"></span>
+                        <span class="remove-filter"></span>
+                    </div>
+
+                    <div class="list">
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="sidebar-container">
+                    <div class="clear-all">
+                        <span class="clear-text">Очистить всё</span>
+                        <span class="clear-btn"></span>
+                    </div>
+                    <div class="limit-warning none">Превышение лимита</div>
+                    <div class="calories-info">
+                        <div class="limit-block sidebar-row">Лимит:<span class="limit-num"></span></div>
+                        <div class="current sidebar-row">Текущие показатели:<span class="current-num"></span></div>
+                    </div>
+                    <div class="calories-diagram">
+                        <span class="graph-title">График калорий</span>
+                        <canvas class="canvas"></canvas>
+                    </div>
+                    <form action="" class="set-limit">
+                        <input type="number" class="limit-input" placeholder="Установите лимит калорий">
+                        <button class="sidebar-btn">Добавить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./src/js/main.js" type="module"></script>
+
+</html>
