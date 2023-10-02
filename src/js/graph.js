@@ -12,7 +12,7 @@ const ctx = canvas.getContext('2d')
 // График
 
 export function draw(items) {
-    const maxPercent = 100;
+    const maxPercent = 200;
 
     const gap = {
         horizontal: 20,
@@ -25,7 +25,7 @@ export function draw(items) {
     }
 
     const barSize = {
-        maxHeight: 50,
+        maxHeight: 35,
         width: 55
     };
     const labelCoordinate = {

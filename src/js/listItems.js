@@ -60,8 +60,10 @@ export function appendList() {
         color: getRandomColor()
     }
 
-    if (name.value & calories.value) {
+    if (!name.value || !calories.value) {
+        alert('Пустое поле')
 
+    } else {
         createFoodItem(foodItem.name, foodItem.calories, foodItem.id)
         setToLocaleStorage(foodItem)
         sumCalories()
@@ -70,7 +72,7 @@ export function appendList() {
         draw(JSON.parse(localStorage.getItem('food')))
         name.value = ''
         calories.value = ''
-    } else alert('Пустое поле')
+    }
 
 }
 
