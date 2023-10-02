@@ -60,14 +60,18 @@ export function appendList() {
         color: getRandomColor()
     }
 
-    createFoodItem(foodItem.name, foodItem.calories, foodItem.id)
-    setToLocaleStorage(foodItem)
-    sumCalories()
-    updateDelBtns()
-    checkLimit()
-    draw(JSON.parse(localStorage.getItem('food')))
-    name.value = ''
-    calories.value = ''
+    if (name.value & calories.value) {
+
+        createFoodItem(foodItem.name, foodItem.calories, foodItem.id)
+        setToLocaleStorage(foodItem)
+        sumCalories()
+        updateDelBtns()
+        checkLimit()
+        draw(JSON.parse(localStorage.getItem('food')))
+        name.value = ''
+        calories.value = ''
+    } else alert('Пустое поле')
+
 }
 
 // Функция для обновления кнопок
